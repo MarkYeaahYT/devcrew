@@ -92,7 +92,7 @@
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table mr-1"></i>
-                                DataTable Example
+                                Data
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -117,11 +117,13 @@
                                         </tfoot>
                                         <tbody>
                                             <tr>
-                                                <td>Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>dikonfirmasi</td>
+                                                <td>Mark Rober, Mark Rober, Mark Rober, </td>
+                                                <td>A Industry</td>
+                                                <td>dikonfirmasi <button class="btn btn-success"> <i class="fa fa-check"></i> </button> </td>
                                                 <td>2020/04/25</td>
-                                                <td></td>
+                                                <td>
+                                                    <button class="btn btn-info"><i class="fa fa-cog"></i></button>
+                                                </td>
                                             </tr>
                                             
                                         </tbody>
@@ -155,5 +157,11 @@
         <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
         <!-- <script src="assets/demo/datatables-demo.js"></script> -->
         <script src="/assets/js/admin.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $("#mytable").DataTable();
+            });
+        </script>
     </body>
 </html>
