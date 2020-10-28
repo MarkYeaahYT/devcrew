@@ -60,23 +60,6 @@
 						<div class="col-md-2">
 							<div id="colorlib-logo"><a href="index.html">App</a></div>
 						</div>
-						<!-- <div class="col-md-10 text-right menu-1">
-							<ul>
-								<li class="active"><a href="index.html">Home</a></li>
-								<li class="has-dropdown">
-									<a href="work.html">Works</a>
-									<ul class="dropdown">
-										<li><a href="work-grid.html">Works grid with text</a></li>
-										<li><a href="work-grid-without-text.html">Works grid w/o text</a></li>
-									</ul>
-								</li>
-								<li><a href="services.html">Services</a></li>
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="shop.html">Shop</a></li>
-								<li><a href="contact.html">Contact</a></li>
-							</ul>
-						</div> -->
 					</div>
 				</div>
 			</div>
@@ -84,15 +67,66 @@
 
 		<section id="home" class="video-hero" style="height: 700px; background-image: url(images/cover_img_1.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
 		<div class="overlay"></div>
-			<!-- <a class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=vqqt5p0q-eU',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a>  -->
 			<div class="display-t text-center">
 				<div class="display-tc">
 					<div class="container">
 						<div class="col-md-12 col-md-offset-0">
-							<div id="boxsurat" class="animate-box">
-								<h2>Buat Surat Sekarang</h2>
-								<p></p>
-								<p><a href="#" id="btnbuatsurat" class="btn btn-primary btn-lg btn-custom">Buat surat</a></p>
+							<div>
+							<form>
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+    </div>
+  </div>
+  <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+          <label class="form-check-label" for="gridRadios1">
+            First radio
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <label class="form-check-label" for="gridRadios2">
+            Second radio
+          </label>
+        </div>
+        <div class="form-check disabled">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+          <label class="form-check-label" for="gridRadios3">
+            Third disabled radio
+          </label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <div class="form-group row">
+    <div class="col-sm-2">Checkbox</div>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
+        <label class="form-check-label" for="gridCheck1">
+          Example checkbox
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+  </div>
+</form>
 							</div>
 						</div>
 					</div>
@@ -105,9 +139,7 @@
 					<div class="row">
 						<div class="col-md-12 text-center">
 							<p>
-								 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> <small> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> </small>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --><br> 
 								Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a>, <a href="http://pexels.com/" target="_blank">Pexels</a>
 							</p>
 						</div>

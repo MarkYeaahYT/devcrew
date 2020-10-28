@@ -11,7 +11,7 @@ class Admin extends CI_Controller{
 
     public function index()
     {
-        
+        # View
         if($this->session->has_userdata('username')){
             $this->load->view("admin/admin");
         }else{
@@ -19,18 +19,9 @@ class Admin extends CI_Controller{
         }
     }
     
-    public function showdata_xhr()
-    {
-        
-    }
-    
-    public function confirms()
-    {
-        
-    }
-    
     public function login()
     {
+        # View
         $this->load->view('admin/login');
     }
 
@@ -75,6 +66,21 @@ class Admin extends CI_Controller{
                 'status' => "brrr"
             )
         );
+    }
+   
+    public function addtempatpkl()
+    {
+        echo json_encode($this->admin_model->addtempatpkl());
+    }
+    
+    public function showdata_xhr()
+    {
+        echo json_encode($this->admin_model->showdata_xhr());
+    }
+    
+    public function confirms()
+    {
+        echo json_encode($this->admin_model->confirms());
     }
 }
 
