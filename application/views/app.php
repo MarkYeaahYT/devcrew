@@ -92,7 +92,7 @@
 							<div id="boxsurat" class="animate-box">
 								<h2>Buat Surat Sekarang</h2>
 								<p></p>
-								<p><a href="#" id="btnbuatsurat" class="btn btn-primary btn-lg btn-custom">Buat surat</a></p>
+								<p><a href="/app/buatsurat" id="btnbuatsurat" class="btn btn-primary btn-lg btn-custom">Buat surat</a></p>
 							</div>
 						</div>
 					</div>

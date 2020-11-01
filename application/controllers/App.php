@@ -19,6 +19,18 @@ class App extends CI_Controller{
         $this->load->view("buatsurat");
     }
 
+    public function siswa()
+    {
+        # View
+        $this->load->view("admin/siswa");
+    }
+
+    public function tempatpkl()
+    {
+        # View
+        $this->load->view("admin/tempatpkl");
+    }
+
     public function add()
     {
         echo json_encode($this->app_model->add());

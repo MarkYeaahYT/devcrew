@@ -41,5 +41,14 @@ class Admin_model extends CI_Model{
     {
         return $this->db->get("tb_surat")->result();
     }
+
+    /**
+     * for Siswa page
+     */
+
+
+    /**
+     * for TempatPkl page
+     */
 }
 ?>
