@@ -1,0 +1,25 @@
+$(document).ready(function () {
+    $('#buat').on('click', function () {
+        var hal = $('#hal').val()
+        var tajaran = $('#tajaran').val()
+        // var kelas = $('#kelas').val()
+        var jurusan = $('#jurusan').val()
+        var tglmulai = $('#tglmulai').val()
+        var tglselesai = $('#tglselesai').val()
+        var nis = $('input[name^=nis]')
+            .map(function (idx, elem) {
+                return $(elem).val()
+            })
+            .get()
+        var tempat = $('#tempat').val()
+
+        console.log(hal)
+        console.log(tajaran)
+        // console.log(kelas)
+        console.log(jurusan)
+        console.log(tglmulai)
+        console.log(tglselesai)
+        console.log(nis)
+        console.log(tempat)
+    })
+})

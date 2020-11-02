@@ -95,6 +95,7 @@
                                             <th>No</th>
                                             <th>Nama</th>
                                             <th>Alamat</th>
+                                            <th>Jurusan</th>
                                             <th>No TLP</th>
                                             <th>Action</th>
                                         </tr>
@@ -103,6 +104,7 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Nama</th>
+                                            <th>Jurusan</th>
                                             <th>Alamat</th>
                                             <th>No TLP</th>
                                             <th>Status</th>
@@ -113,6 +115,7 @@
                                             <td>1</td>
                                             <td>A Industry</td>
                                             <td>Jakarta </td>
+                                            <td>SE</td>
                                             <td>000</td>
                                             <td>
                                                 <button class="btn btn-info"><i class="fa fa-cog"></i></button>
@@ -155,8 +158,15 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <div class="col-md-9">
-                                <label for="ruang">Nama</label>
+                                <label for="nama">Nama</label>
                                 <input type="text" class="form-control" id="nama">
+                                <small class="form-text text-muted"></small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-9">
+                                <label for="jurusan">Jurusan</label>
+                                <input type="text" class="form-control" id="jurusan">
                                 <small class="form-text text-muted"></small>
                             </div>
                         </div>

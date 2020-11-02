@@ -96,6 +96,7 @@
                                             <th>Nama</th>
                                             <th>Nis</th>
                                             <th>Kelas</th>
+                                            <th>Jurusan</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -105,6 +106,7 @@
                                             <th>Nama</th>
                                             <th>Nis</th>
                                             <th>Kelas</th>
+                                            <th>Jurusan</th>
                                             <th>Status</th>
                                         </tr>
                                     </tfoot>
@@ -114,6 +116,7 @@
                                             <td>Beans</td>
                                             <td>124</td>
                                             <td>XII Beans 1</td>
+                                            <td>Beans </td>
                                             <td>
                                                 <button class="btn btn-info"><i class="fa fa-cog"></i></button>
                                             </td>
@@ -155,7 +158,7 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <div class="col-md-9">
-                                <label for="ruang">Nama</label>
+                                <label for="nama">Nama</label>
                                 <input type="text" class="form-control" id="nama">
                                 <small class="form-text text-muted"></small>
                             </div>
@@ -171,6 +174,13 @@
                             <div class="col-md-9">
                                 <label for="kelas">Kelas</label>
                                 <input type="text" class="form-control" id="kelas">
+                                <small class="form-text text-muted"></small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-9">
+                                <label for="jurusan">Jurusan</label>
+                                <input type="text" class="form-control" id="jurusan">
                                 <small class="form-text text-muted"></small>
                             </div>
                         </div>
