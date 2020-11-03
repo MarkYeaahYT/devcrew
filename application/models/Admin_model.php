@@ -31,7 +31,7 @@ class Admin_model extends CI_Model{
  
         $this->db->set('nama', $nama);
         $this->db->set('alamat', $alamat);
-        $this->db->set('no$no_tlp',$no_tlp);
+        $this->db->set('no_tlp',$no_tlp);
  
         return $this->db->insert('tb_tempatpkl');
     }

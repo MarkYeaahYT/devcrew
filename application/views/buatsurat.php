@@ -128,8 +128,9 @@
                                     <div class="col-md-12">
                                         <label for="tempat">Tempat</label>
                                         <select name="tempat" id="tempat" class="form-control">
-                                            <option value="A">A</option>
-                                            <option value="B">B</option>
+                                            
+                                            <!-- Js -->
+                                            
                                         </select>
                                     </div>
                                 </div>

@@ -35,5 +35,10 @@ class App extends CI_Controller{
     {
         echo json_encode($this->app_model->add());
     }
+
+    public function gettempatpkl()
+    {
+        echo json_encode($this->app_model->get_tempat_pkl());
+    }
 }
 ?>
