@@ -39,16 +39,53 @@ class Admin_model extends CI_Model{
 
     public function showdata_xhr()
     {
-        return $this->db->get("tb_surat")->result();
+        // must be join
+        $surat = $this->db->get("tb_surat")->result();
+        if($surat != null){
+            $res = array();
+            for ($i=0; $i < count($surat); $i++) {
+                $this->db->where("id", $surat[$i]->id_tempatpkl);
+                $temp = $this->db->get("tb_tempatpkl")->result()[0]->nama;
+                $nama = array();
+                $this->db->where("surat_id", $surat[$i]->id);
+                $nm = $this->db->get("tb_siswa")->result();
+                for ($j=0; $j < count($nm); $j++) {
+                    array_push($nama, array("nama" => $nm[$j]->nama)); 
+            }
+            array_push($res, array(
+                "id" => $surat[$i]->id,
+                "nama" => $nama,
+                "tempat" => $temp,
+                "status" => $surat[$i]->status,
+                "tanggal_pe" => $surat[$i]->tanggal_pengajuan));
+            }
+        }else{
+            return "0";
+        }
+        return $res;
     }
-
+    
     /**
      * for Siswa page
      */
-
-
+    public function showdata_xhr_siswa()
+    {
+        $this->db->select("id");
+        $this->db->select("surat_id");
+        $this->db->select("nama");
+        $this->db->select("nis");
+        $this->db->select("kelas");
+        $this->db->select("jurusan");
+        return $this->db->get("tb_siswa")->result();
+    }
+    
     /**
      * for TempatPkl page
      */
+    
+    public function showdata_xhr_pkl()
+    {
+        return $this->db->get("tb_tempatpkl")->result();
+    }
 }
 ?>

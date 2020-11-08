@@ -82,6 +82,24 @@ class Admin extends CI_Controller{
     {
         echo json_encode($this->admin_model->confirms());
     }
+    
+    /**
+     * Tempat PKL page
+     */
+    
+    public function showdata_xhr_pkl()
+    {
+        echo json_encode($this->admin_model->showdata_xhr_pkl());
+    }
+    
+    /**
+     * Siswa page
+     */
+    
+    public function showdata_xhr_siswa()
+    {
+        echo json_encode($this->admin_model->showdata_xhr_siswa());
+    }
 }
 
 ?>

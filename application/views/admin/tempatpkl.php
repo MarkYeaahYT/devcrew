@@ -111,7 +111,7 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <tr>
+                                        <!-- <tr>
                                             <td>1</td>
                                             <td>A Industry</td>
                                             <td>Jakarta </td>
@@ -120,7 +120,7 @@
                                             <td>
                                                 <button class="btn btn-info"><i class="fa fa-cog"></i></button>
                                             </td>
-                                        </tr>
+                                        </tr> -->
 
                                     </tbody>
                                 </table>
@@ -207,9 +207,45 @@
     <script src="/assets/js/tempatpkl.js"></script>
 
     <script>
-        var mytable;
+    var url = window.location.origin;
+    var mytable;
     $(document).ready(function() {
-        mytable = $("#mytable").DataTable();
+        mytable = $("#mytable").DataTable({
+            ajax: {
+                url: url + "/admin/showdata_xhr_pkl",
+                dataSrc: ""
+            },
+            columns: [{
+                    data: 'id'
+                },
+                {
+                    data: 'nama'
+                },
+                {
+                    data: 'jurusan'
+                },
+                {
+                    data: 'alamat'
+                },
+                {
+                    data: 'no_tlp'
+                },
+                {
+                    render: function (data, type, row) {
+                        return '<button class="btn btn-info"><i class="fa fa-cog"></i></button>';
+                    }
+                }
+            ]
+
+        });
+        mytable.on('order.dt search.dt', function() {
+            mytable.column(0, {
+                search: 'applied',
+                order: 'applied'
+            }).nodes().each(function(cell, i) {
+                cell.innerHTML = i + 1;
+            });
+        })
     });
     </script>
 </body>
