@@ -3,5 +3,6 @@
 /application/core
 /application/logs
 /application/controllers/Unit.php
+/application/views/unit/*
 
 database.yml

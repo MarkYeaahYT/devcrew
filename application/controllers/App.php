@@ -31,6 +31,12 @@ class App extends CI_Controller{
         $this->load->view("admin/tempatpkl");
     }
 
+    public function templatesurat()
+    {
+        # View
+        $this->load->view("admin/templatesurat");
+    }
+
     public function add()
     {
         echo json_encode($this->app_model->add());

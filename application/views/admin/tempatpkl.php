@@ -61,6 +61,10 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                             Tempat PKL
                         </a>
+                        <a class="nav-link" href="/app/templatesurat">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            Template Surat
+                        </a>
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
@@ -94,8 +98,8 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Nama</th>
-                                            <th>Alamat</th>
                                             <th>Jurusan</th>
+                                            <th>Alamat</th>
                                             <th>No TLP</th>
                                             <th>Action</th>
                                         </tr>
@@ -104,8 +108,8 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Nama</th>
-                                            <th>Jurusan</th>
                                             <th>Alamat</th>
+                                            <th>Jurusan</th>
                                             <th>No TLP</th>
                                             <th>Status</th>
                                         </tr>

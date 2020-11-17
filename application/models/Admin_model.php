@@ -51,7 +51,7 @@ class Admin_model extends CI_Model{
                 $nm = $this->db->get("tb_siswa")->result();
                 for ($j=0; $j < count($nm); $j++) {
                     array_push($nama, array("nama" => $nm[$j]->nama)); 
-            }
+                }
             array_push($res, array(
                 "id" => $surat[$i]->id,
                 "nama" => $nama,
