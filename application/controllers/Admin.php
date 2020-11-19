@@ -100,6 +100,32 @@ class Admin extends CI_Controller{
     {
         echo json_encode($this->admin_model->showdata_xhr_siswa());
     }
+    
+    /**
+     * template page
+     */
+    
+    public function manipulate_template()
+    {
+        echo json_encode($this->admin_model->manipulate_template());
+    }
+    
+    public function show_data_template()
+    {
+        echo json_encode($this->admin_model->show_data_template());
+    }
+    
+    public function generate_surat_xhr()
+    {
+        echo json_encode($this->admin_model->generate_surat_xhr());
+    }
+
+    public function generatesurat()
+    {
+        # view
+        $this->load->view('admin/generatesurat');
+        
+    }
 }
 
 ?>

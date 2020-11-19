@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Tempat PKL</title>
+    <title>Template Surat</title>
     <link href="/assets/css/styles.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
         crossorigin="anonymous" />
@@ -81,7 +81,70 @@
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">Template Surat</li>
                     </ol>
-                    
+                    <div class="form-group">
+                        <div class="col-md-9">
+                            <label for="nomor">Nomor</label>
+                            <input type="text" class="form-control" id="nomor">
+                            <small class="form-text text-muted"></small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-9">
+                            <label for="hal">Hal</label>
+                            <textarea class="form-control" id="hal" cols="30" rows="3"></textarea>
+                            <small class="form-text text-muted"></small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-9">
+                            <label for="tajaran">Tahun Ajaran</label>
+                            <input type="text" class="form-control" id="tajaran">
+                            <small class="form-text text-muted"></small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-9">
+                            <label for="tahab">Tahab</label>
+                            <input type="text" class="form-control" id="tahab">
+                            <small class="form-text text-muted"></small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-9">
+                            <label for="kelas">Kelas</label>
+                            <input type="text" class="form-control" id="kelas">
+                            <small class="form-text text-muted"></small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-9">
+                            <label for="tglmulai">Tanggal Mulai</label>
+                            <input type="date" class="form-control" id="tglmulai">
+                            <small class="form-text text-muted"></small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-9">
+                            <label for="tglselesai">Tanggal Selesai</label>
+                            <input type="date" class="form-control" id="tglselesai">
+                            <small class="form-text text-muted"></small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-9">
+                            <label for="kepsek">Kepala Sekolah</label>
+                            <input type="text" class="form-control" id="kepsek">
+                            <small class="form-text text-muted"></small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-9">
+                            <label for="nip">NIP</label>
+                            <input type="text" class="form-control" id="nip">
+                            <small class="form-text text-muted"></small>
+                        </div>
+                    </div>
+                    <button type="button" id="btn_save" class="btn btn-primary">Save</button>
                 </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
@@ -100,49 +163,22 @@
     </div>
     <!-- Modal -->
     <form>
-        <div class="modal fade" id="modal_add" role="dialog" tabindex="-1" role="dialog"
+        <div class="modal fade" id="modal_done" role="dialog" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="ModalLabel">Input</h5>
+                        <h5 class="modal-title" id="ModalLabel"></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <div class="col-md-9">
-                                <label for="nama">Nama</label>
-                                <input type="text" class="form-control" id="nama">
-                                <small class="form-text text-muted"></small>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-9">
-                                <label for="jurusan">Jurusan</label>
-                                <input type="text" class="form-control" id="jurusan">
-                                <small class="form-text text-muted"></small>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-9">
-                                <label for="alamat">Alamat</label>
-                                <input type="text" class="form-control" id="alamat">
-                                <small class="form-text text-muted"></small>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-9">
-                                <label for="notlp">No TLP</label>
-                                <input type="text" class="form-control" id="notlp">
-                                <small class="form-text text-muted"></small>
-                            </div>
-                        </div>
+                    <div class="modal-body text-center">
+                        <i class="fa fa-check"></i>
+                        <p class="text-info">Success</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" type="submit" id="btn_add" class="btn btn-primary">Save</button>
                     </div>
                 </div>
             </div>
@@ -159,49 +195,11 @@
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
     <!-- <script src="assets/demo/datatables-demo.js"></script> -->
-    <script src="/assets/js/tempatpkl.js"></script>
+    <script src="/assets/js/templatesurat.js"></script>
 
     <script>
     var url = window.location.origin;
-    var mytable;
-    $(document).ready(function() {
-        mytable = $("#mytable").DataTable({
-            ajax: {
-                url: url + "/admin/showdata_xhr_pkl",
-                dataSrc: ""
-            },
-            columns: [{
-                    data: 'id'
-                },
-                {
-                    data: 'nama'
-                },
-                {
-                    data: 'jurusan'
-                },
-                {
-                    data: 'alamat'
-                },
-                {
-                    data: 'no_tlp'
-                },
-                {
-                    render: function (data, type, row) {
-                        return '<button class="btn btn-info"><i class="fa fa-cog"></i></button>';
-                    }
-                }
-            ]
-
-        });
-        mytable.on('order.dt search.dt', function() {
-            mytable.column(0, {
-                search: 'applied',
-                order: 'applied'
-            }).nodes().each(function(cell, i) {
-                cell.innerHTML = i + 1;
-            });
-        })
-    });
+    
     </script>
 </body>
 

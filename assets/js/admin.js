@@ -12,4 +12,12 @@ $(document).ready(function () {
         });
     });
 
+    $("#mytable").on("click", ".btn_action",function () {
+        var id = $(this).data("id")
+        $("#generate_surat").attr("data-id", id);
+        $("#generate_surat").attr("href", "/admin/generatesurat?id="+id);
+        $("#modal_action").modal("show")
+    });
+
+
 });
