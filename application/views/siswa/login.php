@@ -7,11 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Login - Admin | DevCrew</title>
+        <title>Login - Siswa | DevCrew</title>
         <link href="/assets/css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
     </head>
-    <body class="bg-primary">
+    <body class="bg-info">
         <script>
             url = window.location.origin;
         </script>
@@ -26,14 +26,14 @@
                                     <div class="card-body">
                                         <form>
                                             <div class="form-group">
-                                                <label class="small mb-1" for="username">Username</label>
-                                                <input class="form-control py-4" id="username" type="text" placeholder="Enter email username" />
+                                                <label class="small mb-1" for="nis">NIS</label>
+                                                <input class="form-control py-4" id="nis" type="text" placeholder="Enter email username" />
                                             </div>
                                             <div class="form-group">
                                                 <label class="small mb-1" for="password">Password</label>
                                                 <input class="form-control py-4" id="password" type="password" placeholder="Enter password" />
                                             </div>
-                                           
+                                            
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <a class="btn btn-primary btnlogin" >Login</a>
                                             </div>
@@ -66,6 +66,6 @@
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="/assets/js/scripts.js"></script>
-        <script src="/assets/js/admin-login.js"></script>
+        <script src="/assets/js/siswa-login.js"></script>
     </body>
 </html>

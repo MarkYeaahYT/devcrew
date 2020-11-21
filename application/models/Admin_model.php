@@ -4,9 +4,14 @@ class Admin_model extends CI_Model{
     public function confirms()
     {
         $id = $this->input->post("id", true);
-        
-        $this->db->set("status", "1");
         $this->db->where("id", $id);
+        if($this->db->get("tb_surat")->result()[0]->status == 0){
+            $this->db->set("status", "1");
+            $this->db->where("id", $id);
+        }else{
+            $this->db->set("status", "0");
+            $this->db->where("id", $id);
+        }
         return $this->db->update("tb_surat");
     }
     

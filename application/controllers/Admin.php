@@ -86,6 +86,11 @@ class Admin extends CI_Controller{
     /**
      * Tempat PKL page
      */
+    public function tempatpkl()
+    {
+        # View
+        $this->load->view("admin/tempatpkl");
+    }
     
     public function showdata_xhr_pkl()
     {
@@ -95,6 +100,11 @@ class Admin extends CI_Controller{
     /**
      * Siswa page
      */
+    public function siswa()
+    {
+        # View
+        $this->load->view("admin/siswa");
+    }
     
     public function showdata_xhr_siswa()
     {
@@ -104,6 +114,11 @@ class Admin extends CI_Controller{
     /**
      * template page
      */
+    public function templatesurat()
+    {
+        # View
+        $this->load->view("admin/templatesurat");
+    }
     
     public function manipulate_template()
     {

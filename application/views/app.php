@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+	<link rel="icon" href="/bois.ico" sizes="16x16">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Buat surat</title>

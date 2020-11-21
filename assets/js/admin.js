@@ -20,4 +20,22 @@ $(document).ready(function () {
     });
 
 
+    /**
+     * COnfirm unCOnfirm
+     */
+    $("#mytable").on("click", ".confirm" ,function () {
+        var id = $(this).data("id");
+
+        $.ajax({
+            type: "POST",
+            url: url+"/admin/confirms",
+            data: {
+                id: id
+            },
+            dataType: "JSON",
+            success: function (r) {
+                mytable.ajax.reload()
+            }
+        });
+    });
 });

@@ -31,8 +31,8 @@ class App_model extends CI_Model{
    public function add()
    {
        $idpkl = $this->input->post('tempat', true);
-       $hal = $this->input->post('hal', true);
-       $tajaran = $this->input->post('tajaran', true);
+    //    $hal = $this->input->post('hal', true);
+    //    $tajaran = $this->input->post('tajaran', true);
        $tglmulai = $this->input->post('tglmulai', true);
        $tglselesai = $this->input->post('tglselesai', true);
 
@@ -41,8 +41,8 @@ class App_model extends CI_Model{
 
        $this->db->set('id', $suratid);
        $this->db->set('id_tempatpkl', $idpkl);
-       $this->db->set('hal', $hal);
-       $this->db->set('tahun_ajaran', $tajaran);
+    //    $this->db->set('hal', $hal);
+    //    $this->db->set('tahun_ajaran', $tajaran);
        $this->db->set('tgl_dilaksanakan', $tglmulai);
        $this->db->set('tgl_sampai', $tglselesai);
         $q = "";
@@ -61,6 +61,35 @@ class App_model extends CI_Model{
        $jurusan = $this->input->post("jurusan");
        return $this->db->query("select id, nama from tb_tempatpkl where jurusan like '%$jurusan%'")->result();
    }
+
+   public function login()
+   {
+        $nis = $this->input->post('nis', true);
+        $password = $this->input->post('password', true);
+        
+        $password = md5($password);
+        
+        $this->db->where('nis', $nis);
+        $this->db->where('password', $password);
+        return $this->db->get('tb_siswa')->result();
+   }
+
+   public function siswa_get_info_surat()
+   {
+       $id = $this->session->userdata("surat_id");
+       if(isset($id)){
+           $this->db->where("id", $id);
+           return $this->db->get("tb_surat")->result();
+       }else{
+           $res = array();
+            array_push($res, array(
+               "id" => "belum buat surat",
+               "status" => "belum buat surat",
+           ));
+           return $res;
+       }
+   }
+
   
 }
 ?>

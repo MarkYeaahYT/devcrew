@@ -69,12 +69,30 @@ $(document).ready(function () {
         },
         dataType: "JSON",
         success: function (r) {
-            // console.log()
+            // console.log(r)
+            var nomor = 0
+            r[0].nama.forEach(e => {
+                nomor += 1;
+                var html = '<tr class="bruhtable">' 
+                +'<td >'+nomor+'</td>'
+                +'<td >'+e.nis+'</td>'
+                +'<td width="250px">'+e.nama+'</td>'
+                +'<td width="200px">'+e.kelas+'</td>'
+                +'</tr>';
+                $("#mytable").append(html);
+
+                
+            });
+
             $(".pimpinan").text(r[0].tempat);
             $(".alamat").text(r[0].alamat);
             $(".dimana").text(lastindex(r[0].alamat));
             $(".jurusan").text(r[0].jurusan);
             $(".tanggal").text(convertdate(r[0].tanggal_pe.slice(0, 10)));
+            
+            window.print();
         }
     });
+
+    
 });

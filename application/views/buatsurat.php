@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" href="/bois.ico" sizes="16x16">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -56,32 +57,12 @@
                     <!-- <li class="breadcrumb-item active">Dashboard</li> -->
                 </ol>
 
-                
+
                 <div class="container">
                     <div class="p-3 mb-5 bg-white">
                         <div class="pl-5 pr-5 row h-100">
                             <div class="shadow rounded p-4 col-sm-9 center_div">
-                                <!-- <div class="card card-block"> -->
-                                <!-- <form> -->
-                                <div class="row form-group ">
-                                    <div class="col-md-12">
-                                        <label for="hal">Hal</label>
-                                        <input type="text" id="hal" class="form-control"
-                                            placeholder="Permohonan Tempat Ker ...">
-                                    </div>
-                                </div>
-                                <div class="row form-group ">
-                                    <div class="col-md-6">
-                                        <label for="tajaran">Tahun Ajaran</label>
-                                        <input type="text" id="tajaran" class="form-control" placeholder="2020 - 2021">
-                                    </div>
-                                </div>
-                                <div class="row form-group ">
-                                    <div class="col-md-6">
-                                        <label for="kelas">Kelas</label>
-                                        <input type="text" id="kelas" class="form-control" placeholder="XI">
-                                    </div>
-                                </div>
+                               
                                 <div class="row form-group ">
                                     <div class="col-md-12">
                                         <label for="jurusan">Jurusan</label>
@@ -128,9 +109,9 @@
                                     <div class="col-md-12">
                                         <label for="tempat">Tempat</label>
                                         <select name="tempat" id="tempat" class="form-control">
-                                            
+
                                             <!-- Js -->
-                                            
+
                                         </select>
                                     </div>
                                 </div>
@@ -159,7 +140,7 @@
         <footer class="py-4 bg-light mt-auto">
             <div class="container-fluid">
                 <div class="d-flex align-items-center justify-content-between small">
-                    <div class="text-muted">Copyright &copy; Your Website 2020</div>
+                    <div class="text-muted">Copyright &copy; DevCrew 2020</div>
                     <div>
                         <a href="#">Privacy Policy</a>
                         &middot;
@@ -169,6 +150,32 @@
             </div>
         </footer>
     </div>
+    <!-- Modal -->
+    <form>
+        <div class="modal fade" id="modal_done" role="dialog" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalLabel"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <i class="fa fa-check"></i>
+                        <p class="text-info">Success</p>
+                        <p><a href="/app/login">Login</a> untuk melihat status konfirmasi  </p>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- Modal -->
     <!-- </div> -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous">

@@ -1,29 +1,28 @@
-var url = window.location.origin;
+var url = window.location.origin
 
 $(document).ready(function () {
-
-    $("#jurusan").on("change", function () {
-        $("#tempat").empty();
-        var jurusan = $(this).val();
+    $('#jurusan').on('change', function () {
+        $('#tempat').empty()
+        var jurusan = $(this).val()
         $.ajax({
-            type: "POST",
-            url: url+"/app/gettempatpkl",
+            type: 'POST',
+            url: url + '/app/gettempatpkl',
             data: {
-                jurusan: jurusan
+                jurusan: jurusan,
             },
-            dataType: "JSON",
+            dataType: 'JSON',
             success: function (r) {
                 // console.log(r)
-                r.forEach(e => {
-                    $("#tempat").append($("<option>").val(e.id).text(e.nama));
-                });
-            }
-        });
-    });
+                r.forEach((e) => {
+                    $('#tempat').append($('<option>').val(e.id).text(e.nama))
+                })
+            },
+        })
+    })
 
     $('#buat').on('click', function () {
-        var hal = $('#hal').val()
-        var tajaran = $('#tajaran').val()
+        // var hal = $('#hal').val()
+        // var tajaran = $('#tajaran').val()
         // var kelas = $('#kelas').val()
         // var jurusan = $('#jurusan').val()
         var tglmulai = $('#tglmulai').val()
@@ -35,30 +34,26 @@ $(document).ready(function () {
             .get()
         var tempat = $('#tempat').val()
 
-        // console.log(hal)
-        // console.log(tajaran)
-        // console.log(kelas)
-        // console.log(jurusan)
-        // console.log(tglmulai)
-        // console.log(tglselesai)
-        // console.log(nis)
-        // console.log(tempat)
-
         $.ajax({
-            type: "POST",
-            url: url+"/app/add",
+            type: 'POST',
+            url: url + '/app/add',
             data: {
                 tempat: tempat,
-                hal: hal,
-                tajaran: tajaran,
+                // hal: hal,
+                // tajaran: tajaran,
                 tglmulai: tglmulai,
                 tglselesai: tglselesai,
-                nis: nis
+                nis: nis,
             },
-            dataType: "JSON",
+            dataType: 'JSON',
             success: function (r) {
-                console.log(r)
-            }
-        });
+                // console.log(r)
+                $('#modal_done').modal('show')
+                $('#tglmulai').val("")
+                $('#tglselesai').val("")
+                $('#tempat').val("")
+                $('input[name^=nis]').val("")
+            },
+        })
     })
 })
